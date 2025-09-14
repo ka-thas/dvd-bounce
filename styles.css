@@ -7,7 +7,7 @@ body {
 img {
       position: absolute;
       width: 180px;
-      height: auto;
+      height: 79px;
           filter: invert(100%);
 
     }
