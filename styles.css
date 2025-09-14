@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black
+    ;
+}
+img {
+      position: absolute;
+      width: 180px;
+      height: auto;
+          filter: invert(100%);
+
+    }

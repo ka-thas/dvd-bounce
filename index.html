@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DVD Bounce</title>
+  <link rel="icon" href="DVD_logo.png">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <img id="logo" src="DVD_logo.png" alt="dvd">
+
+  <script>
+    const logo = document.getElementById("logo");
+    let x = 100, y = 100;         // starting pos
+    let dx = 3, dy = 2;           // velocity
+    const w = logo.width;
+    const h = logo.height;
+
+    function animate() {
+      x += dx;
+      y += dy;
+
+      // bounce on walls
+      if (x <= 0 || x + w >= window.innerWidth) dx *= -1;
+      if (y <= 0 || y + h >= window.innerHeight) dy *= -1;
+
+      logo.style.left = x + "px";
+      logo.style.top = y + "px";
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
